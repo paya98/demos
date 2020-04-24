@@ -22,19 +22,12 @@ ff-record-list {
 
 ff-record {
     width: 28%;
-    min-height: 445px;
-    overflow: hidden;
     margin: 5px;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    position: relative;
     padding-right: 10px;
     padding-left: 10px;
     border: 1px solid #ced4da;
-    margin-bottom: .4rem;
 }
 
 ff-record img {
@@ -47,10 +40,9 @@ ff-record img {
 
 ff-record .priceContainer {
     justify-content: space-between;
-    margin-top: 8px;
     text-align: center;
     font-size: .9rem;
-    height: 60px;
+    height: 80px;
     vertical-align: middle;
 }
 
@@ -69,11 +61,9 @@ ff-record a, ff-record a:visited, ff-record a:active {
     text-decoration: none;
     text-align: center;
     color: #575757;
-    overflow: hidden;
     display: block;
-    min-height: 60px;
+    min-height: 70px;
     font-size: .9rem;
-    line-height: 1.25rem;
     width: 90%;
     margin-left: 5%;
 }
@@ -106,25 +96,16 @@ ff-record a, ff-record a:visited, ff-record a:active {
 }
 
 ff-searchbox input {
-    height: 32px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
     width: 400px;
     background-color: #fff;
     border-top: 1px solid #ced4da;
     border-bottom: 1px solid #ced4da;
     border-left: 1px solid #ced4da;
     border-right: none;
-    border-radius: 0;
-    padding-left: 10px;
-    outline: none;
-    margin-bottom: 15px;
     font-size: 15px;
     color: #495057;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 button:disabled {
@@ -135,19 +116,12 @@ button:disabled {
 button {
     cursor: pointer;
     display: flex;
-    color: #ced4da;
     border-top: 1px solid #ced4da;
     border-bottom: 1px solid #ced4da;
     border-right: 1px solid #ced4da;
     border-left: none;
-    border-radius: 0;
-    width: auto;
-    height: auto;
-    font-size: 14px;
     padding: 5px 10px;
-    background-color: #006299;
     background-color: transparent;
-    margin-left: -1px;
 }
 
 .input-group {
@@ -172,4 +146,8 @@ button {
 
 button:hover:not([disabled]) {
     color: #EDEDED;
+}
+
+div.demo {
+    color: #575757;
 }

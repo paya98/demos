@@ -1,48 +1,76 @@
+body {
+    width: 802px;
+}
+
 header {
     margin-top: 25px;
 }
 
 ff-asn {
     margin-right: 5px;
+    border: 1px solid #b9b9b9;
+    padding: .625rem .625rem 0;
+    transition: opacity 600ms;
 }
 
 ff-asn-group {
-    border: 1px solid #c7e4ec;
-    border-radius: 5px;
-    margin-bottom: 6px;
     width: 200px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background-color: #f6f6f6;
     height: auto;
+    transition: opacity 400ms;
+    display: block;
+    margin-bottom: .625rem;
+}
+
+ff-asn [data-container=detailedLinks] {
+    padding-top: .625rem;
 }
 
 ff-asn-group-slider {
-    border: 1px solid #c7e4ec;
-    border-radius: 5px;
     margin-bottom: 6px;
     width: 200px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background-color: #f6f6f6;
+    background-color: #f9f9fa;
     height: auto;
 }
 
-.sliderBtn {
-    cursor: pointer;
-    position: absolute;
-    margin-left: -0.5em;
-    top: -0.2em;
-    border-radius: 5px;
-    background: #0b97c4;
-    width: 15px;
+ff-slider {
+    width: 90%;
+    border: 1px solid #375765;
+    border-radius: 2.5rem 0 3.5rem 2.5rem;
+    border-top-right-radius: 2.5em;
     height: 15px;
 }
 
+.sliderBtn {
+    border-radius: 50px;
+    background: repeat-x 50% 50% #f6f6f6;
+    border: 1px solid #b9b9b9;
+    outline: medium;
+    margin-left: -.25em;
+    height: 18px!important;
+    position: absolute;
+    width: 1em;
+    z-index: 3;
+    text-decoration: none;
+    top: -3px;
+    cursor: pointer;
+}
+
 ff-slider .ffw-sliderBar {
-    background-color: #00bfa5;
+    background-color: #004587;
+}
+
+ff-asn-group-slider ff-slider-control input {
+    border: 0;
+    background-color: #f9f9fa;
+    text-align: center;
+    width: 90%;
+    line-height: 21px;
 }
 
 ff-asn-group-slider [data-container="groupCaption"] {
@@ -51,11 +79,8 @@ ff-asn-group-slider [data-container="groupCaption"] {
 
 ff-asn-group-element {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-    border-radius: 5px;
     padding: 10px 5px;
     color: #5c5c5c;
-    background-color: #f6f6f6;
-    border-bottom: 1px solid #ededed;
 }
 
 div[slot="selected"] span.filterName:hover {
@@ -113,14 +138,22 @@ div[slot="unselected"] span.filterName:hover {
 }
 
 .groupCaption {
-    padding: 0 0 0 12px;
+    padding: 1rem 2.5rem 1rem 1rem;
     color: #666;
     position: relative;
-    background-color: #ebebeb;
-    height: 25px !important;
-    border-bottom-radius: 7px;
+    background-color: #f9f9fa;
+    min-height: 25px !important;
+    height: auto;
+    font-weight: 500;
     line-height: 25px;
     vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+[filter-style=TREE] .groupCaption {
+    background: #004587;
+    color: white;
 }
 
 .filterArrowRight {
@@ -173,4 +206,29 @@ main {
 
 ff-breadcrumb-trail {
     margin-left: 10px;
+}
+
+ff-record img {
+    max-width: 130px;
+    max-height: 130px;
+    min-width: 130px;
+    min-height: 130px;
+    padding: 15px;
+}
+
+ff-breadcrumb-trail {
+    font-weight: bold;
+    color: #004587;
+}
+
+input[type=checkbox] + .filterName::before {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: all .3s ease;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .3125rem;
 }

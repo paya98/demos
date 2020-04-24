@@ -19,29 +19,43 @@
 </ff-communication>
 
 <ff-searchbox>
-    <input placeholder="Search..."
-           value="trou"/>
+    <input placeholder="Search..." value="trou"/>
+    <ff-searchbutton>
+        <button class="search_button">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.03 30">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #898b8c;
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path id="Search" class="cls-1" d="M1134.45,70.819l-5.78-5.785a13.167,13.167,0,1,0-2.64,2.635l5.79,5.785A1.862,1.862,0,1,0,1134.45,70.819Zm-22.97-7.008a9.427,9.427,0,1,1,13.33,0A9.449,9.449,0,0,1,1111.48,63.811Z" transform="translate(-1105 -44)"/>
+              </svg></span>
+        </button>
+    </ff-searchbutton>
 </ff-searchbox>
 
 
-<ff-suggest layout="list" unresolved>
+<ff-suggest layout="block" unresolved>
     <section id="searchContainer" class="searchTermContainer">
         <div data-container="searchTerm">
-            <p class="containerCaption">Suchvorschläge</p>
+            <p class="containerCaption">Search terms</p>
             <ff-suggest-item type="searchTerm">
                 <span>{{{name}}}</span>
             </ff-suggest-item>
         </div>
 
         <div data-container="category">
-            <p class="containerCaption">Kategorievorschläge</p>
+            <p class="containerCaption">Suggested categories</p>
             <ff-suggest-item type="category">
                 <span>{{{name}}}</span>
             </ff-suggest-item>
         </div>
 
         <div data-container="brand">
-            <p class="containerCaption">Marken</p>
+            <p class="containerCaption">Brands</p>
             <ff-suggest-item type="brand">
                 <span>{{{name}}}</span>
             </ff-suggest-item>
@@ -50,22 +64,20 @@
 
     <section id="productContainer" class="productsContainer">
         <div data-container="productName">
-            <p class="containerCaption">Vorgeschlagene Produkte</p>
-            <div>
-                <ff-suggest-item type="productName" onclick="changeSearchTerm(this)">
+            <p class="containerCaption">Suggested items</p>
+            <div class="row">
+                <ff-suggest-item type="productName" onclick="changeSearchTerm(this)" class="product-suggest-item">
                     <img data-image>
                     <div class="product-center">
                         <div class="product-name">{{{name}}}</div>
-                        <div>Shipping</div>
-                        <div>Rating</div>
-                    </div>
-                    <!-- Price and availability-->
-                    <div class="product-right">
-                        <div class="product-price">{{attributes.Price}}€</div>
-                        <div class="product-availabilitytext">{{attributes.availabilitytext}}</div>
                     </div>
                 </ff-suggest-item>
             </div>
+        </div>
+        <div class="all-results-container">
+            <ff-searchbutton style="width: 100%">
+                <button id="showAllBtn">Show all results</button>
+            </ff-searchbutton>
         </div>
     </section>
 </ff-suggest>
