@@ -42,6 +42,10 @@ ff-navigation[mobile="true"] > .my-item {
     display: none;
 }
 
+.categories-menu__wrapper {
+    background: #004587;
+}
+
 ff-navigation-item[flyout="false"][has-subelements] > .ffw-navigation-link {
     display: inline-block;
 }

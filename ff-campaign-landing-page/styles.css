@@ -13,3 +13,23 @@ ff-campaign-pushed-products {
     text-align: center;
     display: block;
 }
+
+ff-record {
+    max-width: 20%;
+}
+
+ff-record img {
+    max-width: 130px;
+    max-height: 130px;
+    min-width: 130px;
+    min-height: 130px;
+    padding: 15px;
+}
+
+ff-record-list {
+    padding-left: 25px;
+}
+
+ff-record a {
+    min-height: 90px;
+}
